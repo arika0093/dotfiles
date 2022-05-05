@@ -1,0 +1,1 @@
+/home/ark/.vim/colors/hybrid.vim

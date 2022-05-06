@@ -13,7 +13,7 @@ jobs:
         run: |
           apt-get update &&
           apt-get install -y \
-            git curl fontconfig sudo
+            git curl sudo fontconfig zip
       - name: Install dotfiles
         run: bash init.sh
       - name: File exist check
@@ -31,7 +31,7 @@ jobs:
         run: |
           apt-get update &&
           apt-get install -y \
-            git curl fontconfig sudo
+            git curl sudo fontconfig zip
       - name: Install dotfiles
         run: bash install.sh
 
@@ -45,7 +45,7 @@ jobs:
         run: |
           apt-get update &&
           apt-get install -y \
-            curl fontconfig sudo
+            curl sudo fontconfig zip
       - name: Install dotfiles
         run: bash install.sh
 
@@ -58,7 +58,7 @@ jobs:
       - name: Install required packages
         run: |
           apk add \
-          git curl fontconfig sudo bash
+          bash git curl sudo fontconfig
       - name: Install dotfiles
         run: bash init.sh
 
@@ -73,6 +73,6 @@ jobs:
       - name: Install required packages
         run: |
           pacman -S --noconfirm \
-          git curl fontconfig sudo
+          git curl sudo fontconfig zip
       - name: Install dotfiles
         run: bash init.sh

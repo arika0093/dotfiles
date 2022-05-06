@@ -17,6 +17,7 @@ echo "Install fonts..."
 # make symbolic links to dotfiles
 for f in ${DOT_INSTALL_FILES[@]};
 do
+	mkdir -p $(dirname $HOME/$f)
 	ln -snf $DOT_DIR/"$f" $HOME/"$f"
 	echo "Installed $f"
 done

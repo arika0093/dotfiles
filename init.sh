@@ -5,6 +5,7 @@ DOT_INSTALL_FILES=(
   ".vim/colors"
   ".bash_aliases"
   ".bashrc"
+	".gitconfig"
   ".vimrc"
 )
 # ---------------------------------------------------------------
@@ -16,6 +17,7 @@ echo "Install fonts..."
 . ./install-packages/fonts.sh
 
 # make symbolic links to dotfiles
+echo "Make symbolic links from $DOT_DIR to $HOME"
 for f in ${DOT_INSTALL_FILES[@]};
 do
 	mkdir -p $(dirname $HOME/$f)

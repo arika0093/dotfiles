@@ -17,9 +17,9 @@ jobs:
       - name: Install dotfiles
         run: bash init.sh
       - name: File exist check
-        run: cat ~/.config/git/ignore
+        run: cat $HOME/.config/git/ignore
       - name: Filesize check
-        run: wc ~/.config/git/ignore | awk '{if($1 < 10) exit 1;}'
+        run: wc $HOME/.config/git/ignore | awk '{if($1 < 10) exit 1;}'
 
   install_with_git:
     runs-on: ubuntu-latest

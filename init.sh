@@ -8,6 +8,7 @@ DOT_INSTALL_FILES=(
   ".vimrc"
 )
 # ---------------------------------------------------------------
+DOT_DIR=${1:-"$HOME/dotfiles"}
 # install packages
 echo "Install console packages..."
 . ./install-packages/console.sh
@@ -18,6 +19,6 @@ echo "Install fonts..."
 for f in ${DOT_INSTALL_FILES[@]};
 do
 	mkdir -p $(dirname $HOME/$f)
-	ln -snf $DOT_DIR/"$f" $HOME/"$f"
+	ln -snf ./"$f" $HOME/"$f"
 	echo "Installed $f"
 done

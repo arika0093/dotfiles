@@ -30,8 +30,7 @@ if [ ! -d ${DOT_DIR} ]; then
   fi
 
   # ... actions!
-  cd ${DOT_DIR}
-  . ./init.sh
+  . ./init.sh ${DOT_DIR}
 else
   echo "dotfiles already exists"
   exit 1

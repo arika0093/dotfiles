@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu:latest
     steps:
-      - echo: '👴install to ubuntu and run some tests'
+      - run: echo '👴install to ubuntu and run some tests'
       - uses: actions/checkout@v1
       - name: Install required packages
         run: apt-get update && apt-get install -y git sudo
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu:latest
     steps:
-      - echo: '💡download and install to ubuntu with git'
+      - run: echo '💡download and install to ubuntu with git'
       - uses: actions/checkout@v1
       - name: Install required packages
         run: apt-get update && apt-get install -y git sudo
@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu:latest
     steps:
-      - echo: '💡download and install to ubuntu without git (using curl)'
+      - run: echo '💡download and install to ubuntu without git (using curl)'
       - uses: actions/checkout@v1
       - name: Install required packages
         run: apt-get update && apt-get install -y curl sudo
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     container: alpine:latest
     steps:
-      - echo: '💡install to alpine linux'
+      - run: echo '💡install to alpine linux'
       - uses: actions/checkout@v1
       - name: Install required packages
         run: apk add git sudo bash
@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     container: archlinux:latest
     steps:
-      - echo: '💡install to arch linux'
+      - run: echo '💡install to arch linux'
       - uses: actions/checkout@v1
       - name: Update packages
         run: pacman -Syu --noconfirm

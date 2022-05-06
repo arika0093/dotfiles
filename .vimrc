@@ -10,7 +10,7 @@ set background=dark
 
 "no backup
 set noswapfile
-set nobackup 
+set nobackup
 
 "use mouse-wheel
 "set mouse=a

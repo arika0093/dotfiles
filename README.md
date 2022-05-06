@@ -2,16 +2,15 @@
 
 ## install
 ```sh
-# 必要なら各種ライブラリをインストール
-$ bash install-packages/console.sh
-$ bash install-packages/fonts.sh
-# 環境構築（シンボリックリンクを作成）
-$ bash .bin/install.sh
+$ curl -sS https://raw.githubusercontent.com/arika0093/dotfiles/master/install.sh | sh
 ```
 
 ## references
 ようこそdotfilesの世界へ  
 https://qiita.com/yutkat/items/c6c7584d9795799ee164
+
+ワンライナーでdotfilesをインストールする  
+https://kisqragi.hatenablog.com/entry/2020/02/17/224129
 
 gitconfig  
 https://github.com/yuroyoro/dotfiles/blob/master/.gitconfig

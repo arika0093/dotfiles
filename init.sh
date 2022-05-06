@@ -9,7 +9,9 @@ DOT_INSTALL_FILES=(
   ".vimrc"
 )
 # ---------------------------------------------------------------
-DOT_DIR=${1:-"$HOME/dotfiles"}
+EXECUTE_DIR="$( cd "$( dirname "$0" )" >/dev/null 2>&1 && pwd )"
+DOT_DIR=${1:-"$EXECUTE_DIR"}
+
 # install packages
 echo "Install console packages..."
 . $DOT_DIR/install-packages/console.sh

@@ -1,12 +1,4 @@
 #!/bin/bash
-# if you want add dotfile, add it here
-DOT_INSTALL_FILES=(
-  ".config/git"
-  ".vim/colors"
-  ".bash_aliases"
-  ".bashrc"
-  ".vimrc"
-)
 # based repository
 DOTFILE_REPOSITORY="https://github.com/arika0093/dotfiles.git"
 # tar.gz location

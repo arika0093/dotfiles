@@ -10,7 +10,10 @@ jobs:
       - run: echo '👴install to ubuntu and run some tests'
       - uses: actions/checkout@v1
       - name: Install required packages
-        run: apt-get update && apt-get install -y git sudo
+        run: |
+          apt-get update &&
+          apt-get install -y \
+            git curl fontconfig sudo
       - name: Install dotfiles
         run: bash init.sh
       - name: File exist check
@@ -25,7 +28,10 @@ jobs:
       - run: echo '💡download and install to ubuntu with git'
       - uses: actions/checkout@v1
       - name: Install required packages
-        run: apt-get update && apt-get install -y git sudo
+        run: |
+          apt-get update &&
+          apt-get install -y \
+            git curl fontconfig sudo
       - name: Install dotfiles
         run: bash install.sh
 
@@ -35,8 +41,11 @@ jobs:
     steps:
       - run: echo '💡download and install to ubuntu without git (using curl)'
       - uses: actions/checkout@v1
-      - name: Install required packages
-        run: apt-get update && apt-get install -y curl sudo
+      - name: Install required packages (exclude git)
+        run: |
+          apt-get update &&
+          apt-get install -y \
+            curl fontconfig sudo
       - name: Install dotfiles
         run: bash install.sh
 
@@ -47,7 +56,9 @@ jobs:
       - run: echo '💡install to alpine linux'
       - uses: actions/checkout@v1
       - name: Install required packages
-        run: apk add git sudo bash
+        run: |
+          apk add \
+          git curl fontconfig sudo bash
       - name: Install dotfiles
         run: bash init.sh
 
@@ -60,6 +71,8 @@ jobs:
       - name: Update packages
         run: pacman -Syu --noconfirm
       - name: Install required packages
-        run: pacman -S --noconfirm git sudo
+        run: |
+          pacman -S --noconfirm \
+          git curl fontconfig sudo
       - name: Install dotfiles
         run: bash init.sh

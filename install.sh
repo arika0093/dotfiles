@@ -37,17 +37,9 @@ if [ ! -d ${DOT_DIR} ]; then
     exit 1
   fi
 
+  # ... actions!
   cd ${DOT_DIR}
-  # install packages
-  . ./install-packages/console.sh
-  . ./install-packages/fonts.sh
-
-  # make symbolic links to dotfiles
-  for f in ${DOT_INSTALL_FILES[@]};
-  do
-    ln -snf $DOT_DIR/"$f" $HOME/".$f"
-    echo "Installed .$f"
-  done
+  . ./init.sh
 else
   echo "dotfiles already exists"
   exit 1

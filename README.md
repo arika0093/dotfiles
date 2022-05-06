@@ -2,7 +2,7 @@
 
 ## install
 ```sh
-$ curl -sS https://raw.githubusercontent.com/arika0093/dotfiles/master/install.sh | sh
+$ curl -sS https://raw.githubusercontent.com/arika0093/dotfiles/master/init.sh | sh
 ```
 
 ## references

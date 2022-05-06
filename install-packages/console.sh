@@ -1,3 +1,4 @@
 #!/bin/bash
-# starship
-curl -sS https://starship.rs/install.sh | sh
+# starship (local install)
+mkdir -p $HOME/.bin
+curl -sS https://starship.rs/install.sh | sh -s -- -y -b $HOME/.bin

@@ -96,6 +96,11 @@ if ! shopt -oq posix; then
 fi
 
 # ---------------------------------------------
+# add local path
+LOCAL_BIN="$HOME/.bin"
+PATH=$PATH:$LOCAL_BIN
+
+# ---------------------------------------------
 # google cloud
 if [ -f ~/.bash/.bash_gcloud ]; then
     . ~/.bash/.bash_gcloud

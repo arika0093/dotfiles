@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu:latest
     steps:
-      - echo: '💡install to ubuntu and run some tests'
+      - echo: '👴install to ubuntu and run some tests'
       - uses: actions/checkout@v1
       - name: Install required packages
         run: apt-get update && apt-get install -y git sudo

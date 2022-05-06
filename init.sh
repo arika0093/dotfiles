@@ -12,9 +12,9 @@ DOT_INSTALL_FILES=(
 DOT_DIR=${1:-"$HOME/dotfiles"}
 # install packages
 echo "Install console packages..."
-. ./install-packages/console.sh
+. $DOT_DIR/install-packages/console.sh
 echo "Install fonts..."
-. ./install-packages/fonts.sh
+. $DOT_DIR/install-packages/fonts.sh
 
 # make symbolic links to dotfiles
 echo "Make symbolic links from $DOT_DIR to $HOME"

@@ -9,13 +9,15 @@ jobs:
     steps:
       - run: echo '👴install to ubuntu and run some tests'
       - uses: actions/checkout@v1
+        with:
+          path: dotfiles/
       - name: Install required packages
         run: |
           apt-get update &&
           apt-get install -y \
             git curl sudo fontconfig zip
       - name: Install dotfiles
-        run: bash init.sh
+        run: bash dotfiles/init.sh
       - name: File exist check
         run: cat $HOME/.config/git/ignore
       - name: Filesize check
@@ -27,13 +29,15 @@ jobs:
     steps:
       - run: echo '💡download and install to ubuntu with git'
       - uses: actions/checkout@v1
+        with:
+          path: dotfiles/
       - name: Install required packages
         run: |
           apt-get update &&
           apt-get install -y \
             git curl sudo fontconfig zip
       - name: Install dotfiles
-        run: bash install.sh
+        run: bash dotfiles/install.sh
 
   install_with_curl:
     runs-on: ubuntu-latest
@@ -41,13 +45,15 @@ jobs:
     steps:
       - run: echo '💡download and install to ubuntu without git (using curl)'
       - uses: actions/checkout@v1
+        with:
+          path: dotfiles/
       - name: Install required packages (exclude git)
         run: |
           apt-get update &&
           apt-get install -y \
             curl sudo fontconfig zip
       - name: Install dotfiles
-        run: bash install.sh
+        run: bash dotfiles/install.sh
 
   alpine:
     runs-on: ubuntu-latest
@@ -55,12 +61,14 @@ jobs:
     steps:
       - run: echo '💡install to alpine linux'
       - uses: actions/checkout@v1
+        with:
+          path: dotfiles/
       - name: Install required packages
         run: |
           apk add \
           bash git curl sudo fontconfig
       - name: Install dotfiles
-        run: bash init.sh
+        run: bash dotfiles/init.sh
 
   arch:
     runs-on: ubuntu-latest
@@ -68,6 +76,8 @@ jobs:
     steps:
       - run: echo '💡install to arch linux'
       - uses: actions/checkout@v1
+        with:
+          path: dotfiles/
       - name: Update packages
         run: pacman -Syu --noconfirm
       - name: Install required packages
@@ -75,4 +85,4 @@ jobs:
           pacman -S --noconfirm \
           git curl sudo fontconfig zip
       - name: Install dotfiles
-        run: bash init.sh
+        run: bash dotfiles/init.sh

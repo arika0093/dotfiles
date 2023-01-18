@@ -1,8 +1,9 @@
 #!/bin/bash
+TARGET_BRANCH=${1:-'master'}
 # based repository
 DOTFILE_REPOSITORY="https://github.com/arika0093/dotfiles.git"
 # tar.gz location
-TARBALL_LOCATION="https://github.com/arika0093/dotfiles/archive/master.tar.gz"
+TARBALL_LOCATION="https://github.com/arika0093/dotfiles/archive/${TARGET_BRANCH}.tar.gz"
 
 # ---------------------------------------------------------------
 DOT_DIR="$HOME/dotfiles"
@@ -14,7 +15,7 @@ has() {
 if [ ! -d ${DOT_DIR} ]; then
   # dotfiles download
   if has "git"; then
-    git clone ${DOTFILE_REPOSITORY} ${DOT_DIR}
+    git clone -b ${TARGET_BRANCH} ${DOTFILE_REPOSITORY} ${DOT_DIR}
   elif has "curl" || has "wget"; then
     if has "curl"; then
       curl -L ${TARBALL_LOCATION} -o master.tar.gz

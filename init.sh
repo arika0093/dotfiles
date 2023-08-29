@@ -2,6 +2,7 @@
 # if you want add dotfile, add it here
 DOT_INSTALL_FILES=(
   ".config/git"
+  ".config/starship.toml"
   ".vim/colors"
   ".bash_aliases"
   ".bashrc"

@@ -8,6 +8,7 @@ DOT_INSTALL_FILES=(
   ".bashrc"
 	".gitconfig"
   ".vimrc"
+  ".local/share/code-server"
 )
 # ---------------------------------------------------------------
 EXECUTE_DIR="$( cd "$( dirname "$0" )" >/dev/null 2>&1 && pwd )"

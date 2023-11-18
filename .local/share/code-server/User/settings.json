@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.fileNesting.enabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "files.exclude": {
+        "**/.next/": true,
+        "**/.pnpm-store/": true,
+        "**/node_modules/": true
+    }
+}

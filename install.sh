@@ -34,6 +34,6 @@ if [ ! -d ${DOT_DIR} ]; then
   bash ${DOT_DIR}/init.sh ${DOT_DIR}
 else
   echo "dotfiles already exists"
-  exit 1
+  exit 0
 fi
 

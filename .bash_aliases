@@ -17,9 +17,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # ---------------------------------------------------------------------
 # user added aliases
-alias dc='docker-compose'
-alias dcu='docker-compose up'
-alias dcup='docker-compose up'
-alias dcd='docker-compose down'
-
-alias gc='gcloud'
+export PATH="$HOME/.spin/bin:$PATH"

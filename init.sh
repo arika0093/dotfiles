@@ -2,7 +2,7 @@
 # if you want add dotfile, add it here
 DOT_INSTALL_FILES=(
   ".config/git"
-  ".config/starship.toml"
+  # ".config/starship.toml"
   ".vim/colors"
   ".bash_aliases"
   ".bashrc"
@@ -15,6 +15,8 @@ EXECUTE_DIR="$( cd "$( dirname "$0" )" >/dev/null 2>&1 && pwd )"
 DOT_DIR=${1:-"$EXECUTE_DIR"}
 
 # install packages
+echo "Install console libraries..."
+. $DOT_DIR/install-packages/library.sh
 echo "Install console packages..."
 . $DOT_DIR/install-packages/console.sh
 echo "Install fonts..."

@@ -4,7 +4,7 @@ sudo apt update &&
 sudo apt install -y \
   vim \
   git \
-  fontconfig # fot use jetbrains mono
+  fontconfig unzip # fot use jetbrains mono install
 
 # install spin 
 # https://serversideup.net/open-source/spin/installation/install-linux

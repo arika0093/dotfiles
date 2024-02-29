@@ -28,13 +28,13 @@ jobs:
       - run: echo '🟦download ~/dotfiles and execute install.sh'
       - uses: actions/checkout@v3
         with: 
-          path: '~/dotfiles'
+          path: '$HOME/dotfiles'
       - name: Install required packages
         run: |
           apt-get update &&
           apt-get install -y sudo
       - name: Execute install.sh
-        run: sh ~/dotfiles/install.sh
+        run: sh $HOME/dotfiles/install.sh
       - name: File exist check
         run: cat $HOME/.config/dotfiles-installed
       - name: Filesize check

@@ -33,9 +33,9 @@ if [ ! -d ${DOT_DIR} ]; then
   # ... and install!
   bash ${DOT_DIR}/init.sh ${DOT_DIR}
 else
-  # if not exist `.config/dotfiles-installed`; then not installed yet.
+  # if not exist `~/.config/dotfiles-installed`; then not installed yet.
   # for example, vscode will be downloaded and execute install.sh only.
-  if [ ! -f ${DOT_DIR}/.config/dotfiles-installed ]; then
+  if [ ! -f ${HOME}/.config/dotfiles-installed ]; then
     bash ${DOT_DIR}/init.sh ${DOT_DIR}
   else
     echo "dotfiles already exists and installed."

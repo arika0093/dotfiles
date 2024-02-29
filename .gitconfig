@@ -177,8 +177,6 @@
   generic = <Ctrl-F> move-page-down
   generic = <Ctrl-B> move-page-up
 
-[ghq]
-	root = /Users/ozaki/src
 [rerere]
 	enabled = true
 [mergetool]

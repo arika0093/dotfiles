@@ -2,8 +2,17 @@
 
 ## install
 ```sh
-$ curl -sS https://raw.githubusercontent.com/arika0093/dotfiles/master/install.sh | bash
+curl -sS https://raw.githubusercontent.com/arika0093/dotfiles/master/install.sh | bash
 ```
+
+## file description
+### install.sh
+Obtain this repository using either `git`, `curl`, or `wget`.
+and then execute `bash init.sh`.
+
+### init.sh
+Create a symbolic link for the specified file and execute `install-packages/*.sh` respectively.
+
 
 ## references
 ようこそdotfilesの世界へ  

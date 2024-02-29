@@ -7,31 +7,50 @@ jobs:
     runs-on: ubuntu-latest
     container: ubuntu:latest
     steps:
-      - run: echo '👴install to ubuntu and run some tests'
-      - uses: actions/checkout@v1
+      - run: echo '💡install to ubuntu and run some tests'
+      - uses: actions/checkout@v3
       - name: Install required packages
         run: |
           apt-get update &&
           apt-get install -y \
-            git curl sudo fontconfig zip
+            git curl sudo
       - name: Install dotfiles
         run: bash init.sh
       - name: File exist check
-        run: cat $HOME/.config/git/ignore
+        run: cat $HOME/.config/dotfiles-installed
       - name: Filesize check
-        run: wc $HOME/.config/git/ignore | awk '{if($1 < 10) exit 1;}'
+        run: wc -c $HOME/.config/dotfiles-installed | awk '{if($1 < 10) exit 1;}'
+
+  simulate_vscode_dotfiles:
+    runs-on: ubuntu-latest
+    container: ubuntu:latest
+    steps:
+      - run: echo '🟦download ~/dotfiles and execute install.sh'
+      - uses: actions/checkout@v3
+        with: 
+          path: '~/dotfiles'
+      - name: Install required packages
+        run: |
+          apt-get update &&
+          apt-get install -y sudo
+      - name: Execute install.sh
+        run: sh install.sh
+      - name: File exist check
+        run: cat $HOME/.config/dotfiles-installed
+      - name: Filesize check
+        run: wc -c $HOME/.config/dotfiles-installed | awk '{if($1 < 10) exit 1;}'
 
   install_with_git:
     runs-on: ubuntu-latest
     container: ubuntu:latest
     steps:
       - run: echo '💡download and install to ubuntu with git'
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Install required packages
         run: |
           apt-get update &&
           apt-get install -y \
-            git curl sudo fontconfig zip
+            git curl sudo
       - name: Install dotfiles
         run: bash install.sh
 
@@ -40,25 +59,38 @@ jobs:
     container: ubuntu:latest
     steps:
       - run: echo '💡download and install to ubuntu without git (using curl)'
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Install required packages (exclude git)
         run: |
           apt-get update &&
           apt-get install -y \
-            curl sudo fontconfig zip
+            curl sudo
       - name: Install dotfiles
         run: bash install.sh
+
+  debian:
+    runs-on: ubuntu-latest
+    container: debian:latest
+    steps:
+      - run: echo '💡install to debian linux'
+      - uses: actions/checkout@v3
+      - name: Install required packages
+        run: |
+          apk add \
+          bash git curl sudo
+      - name: Install dotfiles
+        run: bash init.sh
 
   alpine:
     runs-on: ubuntu-latest
     container: alpine:latest
     steps:
       - run: echo '💡install to alpine linux'
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Install required packages
         run: |
           apk add \
-          bash git curl sudo fontconfig
+          bash git curl sudo
       - name: Install dotfiles
         run: bash init.sh
 
@@ -67,12 +99,12 @@ jobs:
     container: archlinux:latest
     steps:
       - run: echo '💡install to arch linux'
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Update packages
         run: pacman -Syu --noconfirm
       - name: Install required packages
         run: |
           pacman -S --noconfirm \
-          git curl sudo fontconfig zip
+          git curl sudo
       - name: Install dotfiles
         run: bash init.sh

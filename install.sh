@@ -13,7 +13,7 @@ has() {
 }
 
 if [ ! -d ${DOT_DIR} ]; then
-  # dotfiles download
+  # install this repository
   if has "git"; then
     git clone -b ${TARGET_BRANCH} ${DOTFILE_REPOSITORY} ${DOT_DIR}
   elif has "curl" || has "wget"; then
@@ -30,10 +30,16 @@ if [ ! -d ${DOT_DIR} ]; then
     exit 1
   fi
 
-  # ... actions!
+  # ... and install!
   bash ${DOT_DIR}/init.sh ${DOT_DIR}
 else
-  echo "dotfiles already exists"
-  exit 0
+  # if not exist `.config/dotfiles-installed`; then not installed yet.
+  # for example, vscode will be downloaded and execute install.sh only.
+  if [ ! -f ${DOT_DIR}/.config/dotfiles-installed ]; then
+    bash ${DOT_DIR}/init.sh ${DOT_DIR}
+  else
+    echo "dotfiles already exists and installed."
+    exit 0  
+  fi
 fi
 

@@ -1,6 +1,7 @@
 #!/bin/bash
-# if you want add dotfile, add it here
+# if you want to copy file/folder, add it here
 DOT_INSTALL_FILES=(
+  ".config/dotfiles-installed"
   ".config/git"
   # ".config/starship.toml"
   ".vim/colors"

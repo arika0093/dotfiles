@@ -26,9 +26,12 @@ jobs:
     container: ubuntu:latest
     steps:
       - run: echo '🟦download ~/dotfiles and execute install.sh'
+      # install dotfiles to $HOME/dotfiles
       - uses: actions/checkout@v3
-        with: 
-          path: '$HOME/dotfiles'
+      - name: Copy dotfiles to $HOME/dotfiles 
+        run: |
+          mkdir -p $HOME/dotfiles
+          cp -r . $HOME/dotfiles
       - name: Install required packages
         run: |
           apt-get update &&

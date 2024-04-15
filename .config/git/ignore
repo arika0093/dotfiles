@@ -261,6 +261,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# and add more...
+.venv/
+
 ### ---------------------------------------------
 # from github/gitignore/main/C++.gitignore
 ### ---------------------------------------------

@@ -14,7 +14,7 @@ set nobackup
 
 "use mouse-wheel
 "set mouse=a
-set ttymouse=xterm2
+"set ttymouse=xterm2
 
 "show statusbar always
 set laststatus=2

@@ -1,6 +1,6 @@
 services:
   website:
-    image: joseluisq/static-web-server:2
+    image: joseluisq/static-web-server:2-alpine
     restart: unless-stopped
     environment:
       - SERVER_INDEX_FILES=install.sh

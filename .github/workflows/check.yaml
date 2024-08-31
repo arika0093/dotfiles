@@ -111,3 +111,16 @@ jobs:
           git curl sudo
       - name: Install dotfiles
         run: bash init.sh
+
+  docker-deploy-check:
+    runs-on: ubuntu-latest
+    steps:
+      # run docker-compose up and check downloadable file
+      - run: echo '🐳run docker-compose up and check downloadable file'
+      - uses: actions/checkout@v3
+      - name: Execute docker-compose up
+        run: docker compose up -d
+      - name: check download file
+        run:  docker compose exec -it website wget -qO - http://localhost/ > install_docker.sh
+      - name: same file check
+        run: cmp --silent -- install.sh install_docker.sh || exit 1

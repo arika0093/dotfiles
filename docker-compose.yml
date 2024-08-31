@@ -1,0 +1,10 @@
+services:
+  website:
+    image: joseluisq/static-web-server:2
+    restart: unless-stopped
+    environment:
+      - SERVER_INDEX_FILES=install.sh
+    volumes:
+      - ./install.sh:/public/install.sh:ro
+
+

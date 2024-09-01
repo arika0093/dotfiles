@@ -1,8 +1,0 @@
-services:
-  website:
-    image: joseluisq/static-web-server:2-alpine
-    restart: unless-stopped
-    volumes:
-      - ./install.sh:/public/index.html:ro
-
-

@@ -17,4 +17,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # ---------------------------------------------------------------------
 # user added aliases
-export PATH="$HOME/.spin/bin:$PATH"
+## claude
+alias cc="claude --dangerously-skip-permissions"
+

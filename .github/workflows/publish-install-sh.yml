@@ -3,7 +3,7 @@ name: Publish install.sh to gh-pages
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:

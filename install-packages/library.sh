@@ -4,6 +4,8 @@ install_package=(
   vim
   git
   curl
+  # monitor utility
+  btop
 )
 
 # install apt package 

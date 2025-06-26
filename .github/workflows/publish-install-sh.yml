@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   deploy:
@@ -17,18 +15,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Copy install.sh
+      - name: Publish file copy
         run: |
-          mkdir public
+          mkdir -p public
           cp install.sh public/
 
-      - name: Deploy to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: public
-
-      - name: Publish
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

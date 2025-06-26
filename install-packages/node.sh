@@ -9,5 +9,5 @@ fi
 # install claude-code
 if ! command -v claude >/dev/null 2>&1; then
   echo "Installing claude-code..."
-	npm install -g @anthropic-ai/claude-code
+	sudo npm install -g @anthropic-ai/claude-code
 fi

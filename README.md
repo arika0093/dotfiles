@@ -2,7 +2,7 @@
 
 ## install
 ```sh
-curl -sSL http://dotfile.eclairs.cc/install.sh | bash
+curl -sSL dotfile.eclairs.cc | bash
 ```
 
 ## references

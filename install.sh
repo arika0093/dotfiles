@@ -1,6 +1,6 @@
 :<<"HTMLEND"
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" style="background: #0a0a0a">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

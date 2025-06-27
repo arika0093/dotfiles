@@ -20,6 +20,9 @@ jobs:
           mkdir -p public
           cp install.sh public/
           cp install.sh public/index.html
+      
+      - name: Add CNAME
+        run: echo 'dotfile.eclairs.cc' > public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

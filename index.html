@@ -44,9 +44,14 @@
     .header h1 {
       margin: 0;
     }
+    .install-caption {
+      color: #999;
+      font-size: 13px;
+      margin-bottom: 4px;
+      margin-left: 7px;
+    }
     .code-container {
       position: relative;
-      margin: 20px 0;
     }
     .code-block {
       background: #0d1117;
@@ -56,8 +61,10 @@
       border-radius: 10px;
     }
     .copy-btn {
+      font-family: "JetBrains Mono", Consolas, monospace;
       position: absolute;
-      top: 15px;
+      font-size: 14px;
+      top: 14px;
       right: 12px;
       background: #21262d;
       border: 1px solid #999b9d;
@@ -121,6 +128,7 @@
     </div>
 
     <div class="install-section">
+      <div class="install-caption">&gt;&gt; Install</div>
       <div class="code-container">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
         <div class="code-block">

@@ -11,3 +11,12 @@ if ! command -v claude >/dev/null 2>&1; then
   echo "Installing claude-code..."
 	sudo npm install -g @anthropic-ai/claude-code
 fi
+
+# install SuperClaude
+# https://github.com/NomenAK/SuperClaude
+if [ ! -d "$HOME/3rd-party/superclaude" ]; then
+  echo "Installing SuperClaude..."
+  git clone https://github.com/NomenAK/SuperClaude.git "$HOME/3rd-party/superclaude"
+  cd "$HOME/3rd-party/superclaude"
+  bash install.sh --force
+fi

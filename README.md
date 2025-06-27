@@ -5,6 +5,13 @@
 curl -sSL dotfile.eclairs.cc | bash
 ```
 
+## update
+```sh
+cd ~/.dotfiles
+git pull origin master
+bash init.sh
+```
+
 ## references
 * https://qiita.com/yutkat/items/c6c7584d9795799ee164  
 * https://kisqragi.hatenablog.com/entry/2020/02/17/224129

@@ -10,6 +10,7 @@ DOT_INSTALL_FILES=(
 	".gitconfig"
   ".vimrc"
   ".local/share/code-server/User/settings.json"
+  "scripts"
 )
 # ---------------------------------------------------------------
 EXECUTE_DIR="$( cd "$( dirname "$0" )" >/dev/null 2>&1 && pwd )"

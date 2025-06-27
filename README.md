@@ -7,8 +7,8 @@ curl -sSL dotfile.eclairs.cc | bash
 
 ## update
 ```sh
-cd ~/.dotfiles
-git pull origin master
+cd ~/dotfiles
+git pull
 bash init.sh
 ```
 

@@ -21,11 +21,9 @@ jobs:
           cp install.sh public/
           cp install.sh public/index.html
       
-      - name: Add CNAME
-        run: echo 'dotfile.eclairs.cc' > public/CNAME
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          cname: dotfile.eclairs.cc

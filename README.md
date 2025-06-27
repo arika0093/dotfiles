@@ -6,10 +6,10 @@ curl -sSL http://dotfile.eclairs.cc/install.sh | bash
 ```
 
 ## references
-https://qiita.com/yutkat/items/c6c7584d9795799ee164
-https://kisqragi.hatenablog.com/entry/2020/02/17/224129
-https://github.com/yuroyoro/dotfiles/blob/master/.gitconfig
-https://github.com/github/gitignore
+* https://qiita.com/yutkat/items/c6c7584d9795799ee164  
+* https://kisqragi.hatenablog.com/entry/2020/02/17/224129
+* https://github.com/yuroyoro/dotfiles/blob/master/.gitconfig
+* https://github.com/github/gitignore
 
 ## use library
 Starship  

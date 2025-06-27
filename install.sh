@@ -156,7 +156,8 @@
 </html>
 HTMLEND
 
-#!/bin/bash
+# ---------------------------------------------------------------
+
 TARGET_BRANCH=${1:-'master'}
 # based repository
 DOTFILE_REPOSITORY="https://github.com/arika0093/dotfiles.git"

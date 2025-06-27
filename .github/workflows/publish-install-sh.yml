@@ -20,6 +20,7 @@ jobs:
           mkdir -p public
           cp install.sh public/
           cp install.sh public/index.html
+          cp -r assets/ public/assets/
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

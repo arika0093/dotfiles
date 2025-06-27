@@ -5,6 +5,16 @@ document.addEventListener('DOMContentLoaded', () => {
       (n.textContent.includes('HTMLEND') || n.textContent.includes('#!/bin/bash')))
       .forEach(n => n.remove());
   });
+  // Add click event to code elements
+  document.querySelectorAll('code').forEach(codeElement => {
+    codeElement.addEventListener('click', () => {
+      const range = document.createRange();
+      const selection = window.getSelection();
+      range.selectNodeContents(codeElement);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    });
+  });
 });
 
 function copyCode(btn) {
@@ -18,15 +28,3 @@ function copyCode(btn) {
     }, 2000);
   });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('code').forEach(codeElement => {
-    codeElement.addEventListener('click', () => {
-      const range = document.createRange();
-      const selection = window.getSelection();
-      range.selectNodeContents(codeElement);
-      selection.removeAllRanges();
-      selection.addRange(range);
-    });
-  });
-});

@@ -19,5 +19,23 @@ bash init.sh
 * https://github.com/github/gitignore
 
 ## use library
-Starship  
+### Starship  
 https://starship.rs/ja-jp/guide/
+
+### GitHub CLI
+https://cli.github.com/
+
+### gitui
+https://github.com/gitui-org/gitui
+
+### btop
+https://github.com/aristocratos/btop
+
+### walk
+https://github.com/kyoheiu/felix
+
+### Claude Code
+https://docs.anthropic.com/ja/docs/claude-code
+
+### SuperClaude
+https://github.com/NomenAK/SuperClaude

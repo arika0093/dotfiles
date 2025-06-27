@@ -20,3 +20,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 ## claude
 alias cc="claude --dangerously-skip-permissions"
 
+## walk
+export EDITOR=vim
+alias lk="cd \"\$(walk "$@")\""

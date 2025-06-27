@@ -30,3 +30,8 @@ if ! command -v gitui >/dev/null 2>&1; then
   sudo mv gitui /usr/local/bin/
   rm "gitui-linux-${ARCH}.tar.gz"
 fi
+
+# install walk
+if ! command -v walk >/dev/null 2>&1; then
+  curl https://raw.githubusercontent.com/antonmedv/walk/master/install.sh | sh
+fi

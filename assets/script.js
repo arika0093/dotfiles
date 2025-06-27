@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Remove bash script content
   document.querySelectorAll('*').forEach(el => {
     [...el.childNodes].filter(n => n.nodeType === 3 && 
-      (n.textContent.includes('HTMLEND') || n.textContent.includes('#!/bin/bash')))
+      (n.textContent.includes('HTML_CONTENT')))
       .forEach(n => n.remove());
   });
   // Add click event to code elements

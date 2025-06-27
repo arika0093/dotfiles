@@ -1,37 +1,88 @@
 body {
   font-family: "JetBrains Mono", Consolas, monospace;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1644088379091-d574269d422f");
+  background-size: cover;
   margin: 0;
   padding: 20px;
-  background: #0a0a0a;
   color: #f0f6fc;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  overflow: hidden;
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .container {
   max-width: 800px;
   width: 100%;
-  padding: 4ex;
-  margin-top: 20vh;
+  padding: 2rem;
+  margin-top: 5vh;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  box-sizing: border-box;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    padding: 1.5rem;
+    margin-top: 3vh;
+    border-radius: 15px;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .github-link {
+    align-self: stretch;
+    justify-content: center;
+  }
+  
+  .copy-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    top: 10px;
+    right: 8px;
+  }
+  
+  pre {
+    padding: 15px 12px;
+    font-size: 14px;
+  }
+  
+  code {
+    font-size: 14px;
+  }
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .header h1 {
   margin: 0;
+  font-size: 1.5rem;
 }
 .install-caption {
   color: #999;
@@ -93,6 +144,7 @@ code::before {
   border-radius: 6px;
   border: 1px solid #30363d;
   transition: background-color 0.2s;
+  white-space: nowrap;
 }
 .github-link:hover {
   background: #30363d;

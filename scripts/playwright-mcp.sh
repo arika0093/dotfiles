@@ -2,7 +2,8 @@
 # install japanese-font
 if ! fc-list | grep -q "vlgothic"; then
   echo "Installing Japanese font..."
-  sudo apt-get install -y fonts-vlgothic
+  sudo apt update
+  sudo apt install -y fonts-vlgothic fonts-noto-color-emoji
 fi
 
 # if not installed playwright

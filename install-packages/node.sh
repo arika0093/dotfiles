@@ -12,11 +12,14 @@ if ! command -v claude >/dev/null 2>&1; then
   sudo -E npm install -g @anthropic-ai/claude-code
 fi
 
-# install SuperClaude
-# https://github.com/NomenAK/SuperClaude
-if [ ! -d "$HOME/3rd-party/superclaude" ]; then
-  echo "Installing SuperClaude..."
-  git clone https://github.com/NomenAK/SuperClaude.git "$HOME/3rd-party/superclaude"
-  cd "$HOME/3rd-party/superclaude"
-  bash install.sh --force
+# install uv
+if ! command -v uv >/dev/null 2>&1; then
+  echo "Installing uv..."
+  curl -Ls https://astral.sh/uv/install.sh | sh
 fi
+
+# install SuperClaude
+# https://github.com/SuperClaude-Org/SuperClaude_Framework
+echo "Installing SuperClaude..."
+uvx pip install SuperClaude
+uvx SuperClaude install --quick -y

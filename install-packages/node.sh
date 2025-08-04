@@ -3,7 +3,7 @@
 if ! command -v node >/dev/null 2>&1; then
   echo "Installing Node.js..."
   curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
-  sudo apt install -y nodejs
+  sudo -E apt install -y nodejs
 fi
 
 # install claude-code

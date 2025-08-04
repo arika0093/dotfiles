@@ -9,16 +9,16 @@ install_package=(
 )
 
 # install apt package 
-sudo apt update &&
-sudo apt install -y "${install_package[@]}"
+sudo -E apt update &&
+sudo -E apt install -y "${install_package[@]}"
 
 # install GitHub CLI
 if ! command -v gh >/dev/null 2>&1; then
   echo "Installing GitHub CLI..."
   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-  sudo apt update
-  sudo apt install gh
+  sudo -E apt update
+  sudo -E apt install gh
 fi
 
 # install gitui from github releases

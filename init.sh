@@ -21,8 +21,10 @@ echo "Install console libraries..."
 . $DOT_DIR/install-packages/library.sh
 echo "Install console packages..."
 . $DOT_DIR/install-packages/console.sh
-echo "Install node and packages..."
-. $DOT_DIR/install-packages/node.sh
+echo "Install nodejs, python, etc..."
+. $DOT_DIR/install-packages/runtime.sh
+echo "Install claude-code, etc..."
+. $DOT_DIR/install-packages/ai.sh
 echo "Install fonts..."
 . $DOT_DIR/install-packages/fonts.sh
 

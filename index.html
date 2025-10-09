@@ -28,7 +28,7 @@
       <div class="code-container">
         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
         <div class="code-block">
-          <pre><code class="language-bash">curl -sSL dotfile.eclairs.cc | bash</code></pre>
+          <pre><code class="language-bash">curl -sSL dotfiles.eclairs.cc | bash</code></pre>
         </div>
       </div>
     </div>

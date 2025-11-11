@@ -7,6 +7,7 @@ DOT_INSTALL_FILES=(
   ".vim/colors"
   ".bash_aliases"
   ".bashrc"
+  ".claude.json"
   ".gitconfig.d"
   ".gitconfig"
   ".vimrc"

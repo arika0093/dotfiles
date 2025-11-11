@@ -1,0 +1,47 @@
+{
+  "numStartups": 4,
+  "installMethod": "unknown",
+  "autoUpdates": true,
+  "tipsHistory": {
+    "new-user-warmup": 2,
+    "plan-mode-for-complex-tasks": 2,
+    "terminal-setup": 2,
+    "shift-enter-setup": 2,
+    "memory-command": 3,
+    "theme-command": 3,
+    "status-line": 3,
+    "stickers-command": 3,
+    "prompt-queue": 3,
+    "enter-to-steer-in-relatime": 3,
+    "todo-list": 3,
+    "# for memory": 3,
+    "install-github-app": 3,
+    "drag-and-drop-images": 3,
+    "double-esc-code-restore": 3,
+    "continue": 3,
+    "shift-tab": 3,
+    "image-paste": 3,
+    "tab-toggle-thinking": 3,
+    "ultrathink-keyword": 3
+  },
+  "cachedStatsigGates": {
+    "tengu_disable_bypass_permissions_mode": false,
+    "tengu_tool_pear": false
+  },
+  "cachedDynamicConfigs": {
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    }
+  },
+  "sonnet45MigrationComplete": true,
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "2.0.37",
+  "bypassPermissionsModeAccepted": true,
+  "hasOpusPlanDefault": false,
+  "lastReleaseNotesSeen": "2.0.37",
+  "fallbackAvailableWarningThreshold": 0.5,
+  "hasIdeOnboardingBeenShown": {
+    "vscode": true
+  }
+}
